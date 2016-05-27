@@ -5,4 +5,4 @@ script:
   - npm run test:coverage
   - npm run build:production
 after_success:
-  - CODECLIMATE_REPO_TOKEN=622bfc2746cf362e553b3a79d2317a28af9bd1504565fbde6c479b4b9d750cb7 codeclimate-test-reporter < coverage.lcov
+  - codeclimate-test-reporter < coverage.lcov

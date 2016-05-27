@@ -4,8 +4,8 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register test/*.test.js",
-    "test:coverage": "nyc npm run test",
+    "test": "mocha --compilers js:babel-register test/*.test.js --cover",
+    "test:coverage": "nyc npm run test && nyc report --reporter=text-lcov > coverage.lcov",
     "clean": "rm -rf lib",
     "build": "babel src -d lib",
     "build:production": "npm run clean && npm run build"
@@ -29,6 +29,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-preset-stage-2": "^6.5.0",
     "babel-register": "^6.9.0",
+    "codeclimate-test-reporter": "^0.3.1",
     "expect": "^1.20.1",
     "mocha": "^2.5.3",
     "nyc": "^6.4.4"

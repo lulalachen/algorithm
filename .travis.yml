@@ -2,9 +2,7 @@ language: node_js
 node_js:
   - "5.1.0"
 script:
-  - npm run test
   - npm run test:coverage
   - npm run build:production
-addons:
-    code_climate:
-        repo_token: 622bfc2746cf362e553b3a79d2317a28af9bd1504565fbde6c479b4b9d750cb7
+after_success:
+  - CODECLIMATE_REPO_TOKEN=622bfc2746cf362e553b3a79d2317a28af9bd1504565fbde6c479b4b9d750cb7 codeclimate-test-reporter < coverage.lcov

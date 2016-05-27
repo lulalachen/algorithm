@@ -4,7 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register test/*.test.js --cover",
+    "test": "mocha --compilers js:babel-register test/*.test.js",
     "test:coverage": "nyc npm run test && nyc report --reporter=text-lcov > coverage.lcov",
     "clean": "rm -rf lib",
     "build": "babel src -d lib",

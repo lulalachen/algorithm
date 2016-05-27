@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha --compilers js:babel-register test/*.test.js",
     "test:coverage": "nyc npm run test && nyc report --reporter=text-lcov > coverage.lcov",
+    "coverage": "codeclimate-test-reporter < coverage.lcov",
     "clean": "rm -rf lib",
     "build": "babel src -d lib",
     "build:production": "npm run clean && npm run build"

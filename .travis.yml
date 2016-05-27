@@ -4,7 +4,6 @@ node_js:
 script:
 - npm run test:coverage
 - npm run build:production
-after_success:
 - codeclimate-test-reporter < coverage.lcov
 deploy:
   provider: npm

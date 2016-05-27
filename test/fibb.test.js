@@ -1,4 +1,4 @@
-import fibonacci from '../src'
+import { fibonacci } from '../src'
 import expect from 'expect'
 
 describe('fibonacci', () => {

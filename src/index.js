@@ -1,2 +1,1 @@
-import fibonacci from './fibonacci'
-export default fibonacci
+export { default as fibonacci } from './fibonacci'

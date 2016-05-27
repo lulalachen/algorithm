@@ -1,7 +1,7 @@
 {
-  "name": "algorithm",
+  "name": "algorithm-tool",
   "version": "1.0.0",
-  "description": "",
+  "description": "Algorithm tools in Javascripts",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register test/*.test.js",
@@ -15,7 +15,7 @@
     "url": "git+https://github.com/lulalachen/algorithm.git"
   },
   "author": "lulalachen",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lulalachen/algorithm/issues"
   },

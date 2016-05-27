@@ -14,3 +14,4 @@ deploy:
   skip_cleanup: true
 after_success:
   - npm run coverage
+  - rm coverage.lcov

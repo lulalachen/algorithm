@@ -4,6 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-## [1.0.1] - 2016-05-27
+## [1.0.2] - 2016-05-27
 ### Added
 - fibonacci

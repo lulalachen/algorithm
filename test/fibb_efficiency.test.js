@@ -37,7 +37,7 @@ describe('fibonacci efficiency test', () => {
     getCorrectnessTest(fibonacci_yCombinator, 'yCombinator')
   })
   describe('prints process time /', () => {
-    getEfficiencyTest(fibonacci, 'recursive')
+    // getEfficiencyTest(fibonacci, 'recursive')
     getEfficiencyTest(fibonacci_dp, 'dp')
     getEfficiencyTest(fibonacci_cache, 'cache')
     getEfficiencyTest(fibonacci_memorize, 'memorize')

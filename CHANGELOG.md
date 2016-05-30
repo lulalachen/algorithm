@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Added
+- factorial
 - extract common used test utils
 
 ## [1.0.4] - 2016-05-29

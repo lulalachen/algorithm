@@ -1,4 +1,3 @@
-import expect from 'expect'
 import {
   fibonacci,
   fibonacci_dp,
@@ -7,26 +6,18 @@ import {
   fibonacci_yCombinator,
 } from '../src'
 
-const tests = [10, 20, 30, 40]
-const testAlgorithms = (func, name) => {
-  tests.map((test) => {
-    console.time(`\t${name}-f(${test})`)
-    func(test)
-    console.timeEnd(`\t${name}-f(${test})`)
-  })
-}
-const answers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-const test_correctness = (func) => {
-  answers.map((ans, index) => {
-    expect(func(index)).toEqual(ans)
-  })
-}
+import {
+  generateExecutions,
+  generateCorrectnessChecks,
+} from '../utils'
 
+const tasks = [10, 20, 30, 40]
 const getEfficiencyTest =
-  (algorithm, name) => it(`${name}`, () => testAlgorithms(algorithm, `${name}`))
+  (algorithm, name) => it(`${name}`, () => generateExecutions(algorithm, tasks, `${name}`))
 
+const expectedAnswers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 const getCorrectnessTest =
-  (algorithm, name) => it(`${name}`, () => test_correctness(algorithm))
+  (algorithm, name) => it(`${name}`, () => generateCorrectnessChecks(algorithm, expectedAnswers))
 
 describe('fibonacci efficiency test', () => {
   describe('returns correct answer /', () => {
